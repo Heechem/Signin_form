@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>signing Form</title>
+  </head>
+  <body>
+    <div class="img_background">
+      <img
+        class="back_img"
+        src="https://images.unsplash.com/photo-1676643136045-6cfe7eb1fef9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+        alt=""
+      />
+      <img
+        class="logo"
+        src="https://images.unsplash.com/photo-1556742205-e10c9486e506?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt=""
+      />
+    </div>
+
+    <fieldset>
+      <form action="">
+        <legend>
+          Please fill up the form below
+          <div><br /><small>(Areas with * are mandatory)</small></div>
+        </legend>
+        <h2 class="title">Informations requested</h2>
+        <div class="form_stack">
+          <div class="form_info">
+            <label for="first">First Name *</label><br />
+            <input type="text" name="FirstName" id="first" />
+          </div>
+          <div class="form_info">
+            <label for="last">Last Name *</label><br />
+            <input type="text" name="LastName" id="last" required />
+          </div>
+          <div class="form_info">
+            <label for="email">Email *</label><br />
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form_info">
+            <label for="phone">Phone Number *</label><br />
+            <input type="number" name="phoneNumber" id="phone" required />
+          </div>
+          <div class="form_info">
+            <label for="password">Password *</label><br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required="true"
+            />
+          </div>
+          <div>
+            <label for="Con_password">Confirm Password *</label><br />
+            <input
+              type="password"
+              name="Con_password"
+              id="Con_password"
+              required="true"
+            />
+          </div>
+        </div>
+      </form>
+      <button type="submit">Submit</button>
+      <h3>Already a member</h3>
+      <a href="#" target="_blank">Log in</a>
+    </fieldset>
+
+    <script src="sctipt.js"></script>
+  </body>
+</html>

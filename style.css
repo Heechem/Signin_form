@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.img_background {
+  display: flex;
+  width: 45%;
+}
+.back_img {
+  z-index: -10;
+  position: relative;
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+}
+img.logo {
+  position: absolute;
+  width: 40%;
+  background: transparent;
+
+  align-self: center;
+}
+fieldset {
+  width: 65%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 20px;
+
+  flex-wrap: wrap;
+  position: relative;
+}
+
+input {
+  margin: 0 15px;
+}
+
+.form_stack {
+  /* position: absolute; */
+  width: 60%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  height: 400px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+h2 {
+  padding: 20px;
+  text-align: left;
+}
+
+.form_info label {
+  font-weight: 600;
+}
+
+button {
+  margin: 20px;
+  align-self: center;
+  padding: 10px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
