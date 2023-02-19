@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
+
 *,
 *::after,
 *::before {
@@ -6,28 +8,50 @@
   box-sizing: border-box;
 }
 body {
+  font-family: "Phudu", cursive;
   height: 100vh;
   display: flex;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 233, 205, 1) 79%
+  );
 }
 
 .img_background {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45%;
+  object-fit: fill;
 }
 .back_img {
   z-index: -10;
   position: relative;
   display: flex;
+
+  align-items: center;
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
-img.logo {
+.log_img {
   position: absolute;
+  height: 50%;
   width: 40%;
   background: transparent;
 
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
+.log_img img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+}
+
 fieldset {
   width: 65%;
 }
@@ -41,7 +65,10 @@ form {
 }
 
 input {
-  margin: 0 15px;
+  margin: 10px 20px;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
 }
 
 .form_stack {
@@ -68,9 +95,69 @@ h2 {
 }
 
 button {
-  margin: 20px;
-  align-self: center;
+  margin: 50px;
+  align-self: flex-start;
+
   padding: 10px 40px;
   border-radius: 8px;
   cursor: pointer;
+  width: 200px;
+  font-weight: 700;
+  font-size: 18px;
+  outline: none;
+  background: #596d48;
+  border: none;
+}
+
+button:hover {
+  outline: none;
+  border: none;
+  box-shadow: 5px 0px 15px 3px rgba(0, 0, 0, 0.7);
+}
+
+button:active {
+  scale: 0.96;
+}
+
+input:active,
+input:focus {
+  box-shadow: 0px 0 10px 2px rgb(0, 0, 0, 0.5);
+  outline: none;
+}
+
+label {
+  color: #ffffba;
+  text-shadow: 1px 0px 10px 2px rgb(0, 0, 0, 0.5);
+  line-height: 1.5;
+  letter-spacing: 1.5;
+}
+
+.footer {
+  display: flex;
+  font-size: 17px;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  color: darkorange;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .form_stack {
+    overflow: auto;
+  }
+}
+
+small.msg {
+  display: none;
+}
+
+.invalid {
+  box-shadow: red;
+  border: 2px solid red;
 }
