@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Phudu&display=swap');
 
 *,
 *::after,
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Phudu", cursive;
+  font-family: 'Phudu', cursive;
   height: 100vh;
   display: flex;
   background: radial-gradient(
@@ -160,4 +160,36 @@ small.msg {
 .invalid {
   box-shadow: red;
   border: 2px solid red;
+}
+
+/* input:invalid:required {
+  background-color: lightcoral;
+} */
+
+input:valid:required {
+  background-color: none;
+}
+
+/* adding the error message  */
+
+.error_message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  padding: 8rem;
+  display: none;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.error_message.visible {
+  display: flex;
 }
